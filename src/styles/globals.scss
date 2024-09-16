@@ -35,8 +35,7 @@ body {
   }
 
   /* List styles */
-  ul{
-    list-style-type: disc;
+  ul, ol {
     padding: 0 1rem;
     margin: 1.25rem 1rem 1.25rem 0.4rem;
     
@@ -44,18 +43,35 @@ body {
       margin-top: 0.25em;
       margin-bottom: 0.25em;
     }
+
+    ul, ol {
+      margin: 0.5rem 0 0.5rem 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      list-style-type: circle;
+
+      ul {
+        list-style-type: square;
+      }
+    }
   }
   
-  ol{
-   list-style-type: decimal;
-   padding: 0 1rem;
-   margin: 1.25rem 1rem 1.25rem 0.4rem;
-   
-   li p {
-     margin-top: 0.25em;
-     margin-bottom: 0.25em;
-   }
- }
+  ol {
+    list-style-type: decimal;
+
+    ol {
+      list-style-type: lower-alpha;
+
+      ol {
+        list-style-type: lower-roman;
+      }
+    }
+  }
 
   /* Heading styles */
   h1, 
@@ -65,14 +81,14 @@ body {
   h5, 
   h6 {
     line-height: 1.1;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     text-wrap: pretty;
   }
 
   h1, 
   h2 {
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   h1 { 
@@ -95,17 +111,17 @@ body {
 
   /* Code and preformatted text styles */
   code {
-    background-color: var(--purple-light);
+    background-color: rgb(240, 64, 240);
     border-radius: 0.4rem;
-    color: var(--black);
+    color:rgb(29, 28, 28);
     font-size: 0.85rem;
     padding: 0.25em 0.3em;
   }
 
   pre {
-    background: var(--black);
+    background: rgb(29, 28, 28);
     border-radius: 0.5rem;
-    color: var(--white);
+    color: #ffffff;
     font-family: 'JetBrainsMono', monospace;
     margin: 1.5rem 0;
     padding: 0.75rem 1rem;
@@ -119,14 +135,14 @@ body {
   }
 
   blockquote {
-    border-left: 3px solid var(--gray-3);
+    border-left: 3px solid rgb(150, 150, 150);
     margin: 1.5rem 0;
     padding-left: 1rem;
   }
 
   hr {
     border: none;
-    border-top: 1px solid var(--gray-2);
+    border-top: 1px solid rgb(179, 176, 176);
     margin: 2rem 0;
   }
 }
